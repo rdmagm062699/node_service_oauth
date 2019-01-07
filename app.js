@@ -7,7 +7,6 @@ const BearerStrategy = require('passport-azure-ad').BearerStrategy;
 const authenticatedUserTokens = [];
 
 const authenticationStrategy = new BearerStrategy(config.options, (token, done) => {
-    console.log(token);
     return done(null, token);
 });
 
